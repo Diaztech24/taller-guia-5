@@ -19,8 +19,7 @@ registros en la base de datos SQLite.
 """
 import sqlite3
 
-def crear(conn: sqlite3.Connection , nombre: str , correo: str , nota: float)
--> None:
+def crear(conn: sqlite3.Connection , nombre: str , correo: str , nota: float)-> None:
     """
     Inserta un nuevo estudiante en la base de datos.
     conn: conexión activa a la base de datos
@@ -74,7 +73,7 @@ Módulo principal del sistema de gestión de estudiantes.
 Permite ejecutar un sistema CRUD sobre una base de datos SQLite
 mediante un menú en consola.
 """
-from database import conectar , crear_tabla
+from conexion import conectar , crear_tabla
 from crud import crear , leer , actualizar , eliminar
 
 def menu() -> None:
